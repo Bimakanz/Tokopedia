@@ -1,50 +1,104 @@
-# Welcome to your Expo app 👋
+# Tokopedia Clone App 🛍️
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern, feature-rich e-commerce application built with **React Native** and **Expo**, replicating the core functionalities of Tokopedia. This project demonstrates complex UI/UX implementation, global state management, and seamless navigation.
 
-## Get started
+## 📱 Overview
 
-1. Install dependencies
+This application simulates a real-world e-commerce experience, featuring a dynamic home screen, detailed product pages with animations, a functional shopping cart, wishlist management, transaction history, and an engaging video feed.
 
-   ```bash
-   npm install
-   ```
+## ✨ Key Features
 
-2. Start the app
+- **🏠 Home Screen**: 
+  - Dynamic banner carousel.
+  - Category navigation.
+  - Product recommendations.
+  
+- **🛍️ Product Details**:
+  - **"Fly to Cart" Animation**: Visual feedback when adding items to the cart.
+  - **Wishlist Integration**: Heart icon toggle with notification.
+  - Image gallery and detailed descriptions.
+  - Related product recommendations.
 
-   ```bash
-   npx expo start
-   ```
+- **🛒 Shopping Cart**:
+  - Global state management using Context API.
+  - Adjust quantity, remove items, and calculate totals dynamically.
+  - Selection logic for checkout.
 
-In the output, you'll find options to open the app in a
+- **❤️ Wishlist**:
+  - Save favorite items.
+  - **Category Filter**: Filter wishlist items by category (e.g., "Men's Clothing", "Electronics").
+  - Move items directly to the cart.
+  - Badge notification on the tab bar.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- **📜 Transaction History**:
+  - View past orders with status.
+  - **Filter Transactions**: Filter by status or category.
+  - **Buy Again**: Quickly re-order items from history.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **🎬 Video Feed**: 
+  - TikTok-style vertical video feed.
+  - Autoplay/pause visibility tracking.
+  - Product overlay to buy directly from the feed.
 
-## Get a fresh project
+- **🎨 UI/UX**:
+  - **Custom Splash Screen**: Branded launch screen.
+  - **Tab Navigation**: Custom bottom bar with notification badges.
+  - **Micro-interactions**: Smooth transitions and feedback modals.
 
-When you're ready, run:
+## 🛠️ Tech Stack
 
-```bash
-npm run reset-project
+- **Framework**: React Native (Expo)
+- **Language**: TypeScript
+- **Navigation**: Expo Router (File-based routing)
+- **State Management**: React Context API
+- **Icons**: Lucide React Native
+- **Media**: Expo AV (Audio/Video)
+- **Styling**: Inline Styles / React Native StyleSheet
+
+## 🚀 Getting Started
+
+Follow these steps to run the project locally:
+
+1.  **Clone the repository**
+    ```bash
+    git clone https://github.com/yourusername/tokopedia-clone.git
+    cd tokopedia-clone
+    ```
+
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the server**
+    ```bash
+    npx expo start -c
+    ```
+    *(Note: The `-c` flag clears the cache, recommended for asset updates like splash screens)*
+
+4.  **Run on Device/Emulator**
+    -   **Android**: Press `a` in the terminal (requires Android Studio or connected device).
+    -   **iOS**: Press `i` in the terminal (requires Xcode or Simulator).
+    -   **Physical Device**: Scan the QR code with the **Expo Go** app.
+
+## 📂 Folder Structure
+
+```
+├── app/                  # Application source code (Expo Router)
+│   ├── (tabs)/           # Tab navigation screens (Home, Feed, Wishlist, Transaction)
+│   ├── cart.tsx          # Shopping cart screen
+│   ├── detailProducts.tsx# Product detail screen
+│   └── _layout.tsx       # Root layout and context providers
+├── assets/               # Images and static resources
+├── components/           # Reusable UI components
+├── context/              # Global state (CartContext)
+└── app.json              # Expo configuration
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 📸 Screenshots
 
-## Learn more
+*(Add your screenshots here)*
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Built with ❤️ by **[Your Name/Team]**

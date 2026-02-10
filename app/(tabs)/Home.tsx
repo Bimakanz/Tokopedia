@@ -30,8 +30,9 @@ export default function Home() {
     const router = useRouter()
 
     const bannerImages = [
-        require('../../assets/images/image 37.svg'),
-        require('../../assets/images/tokped.jpg')
+        { uri: 'https://p16-images-comn-sg.tokopedia-static.net/tos-alisg-i-zr7vqa5nfb-sg/ce6066f61ef54fc2a3ce4d3b943daae5~tplv-zr7vqa5nfb-resize-jpeg:800:0.webp?ect=4g' },
+        { uri: 'https://p16-images-comn-sg.tokopedia-static.net/tos-alisg-i-zr7vqa5nfb-sg/f214e48f4448412b8021fe8bcbe057fb~tplv-zr7vqa5nfb-resize-jpeg:800:0.webp?ect=4g' },
+        { uri: 'https://p16-images-comn-sg.tokopedia-static.net/tos-alisg-i-zr7vqa5nfb-sg/4f95ca31e3cf49089f8fe17e895fae3f~tplv-zr7vqa5nfb-resize-jpeg:800:0.webp?ect=4g' }
     ]
 
     // Navigation handler
@@ -157,7 +158,7 @@ export default function Home() {
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                             <MapPin size={14} color="#15ff00ff" />
                             <Text style={{ fontSize: 12, color: 'black', marginLeft: 4, flex: 1 }}>
-                                Dikirim ke <Text style={{ fontWeight: 'bold' }}>Rumah Denis Alwan (Brebes)</Text>
+                                Dikirim ke <Text style={{ fontWeight: 'bold' }}>Rumah Bimasena (Sindangbarang)</Text>
                             </Text>
                         </View>
 
@@ -184,7 +185,7 @@ export default function Home() {
                                 <Image
                                     source={image}
                                     style={{ width: width, height: 150 }}
-                                    resizeMode="cover"
+                                    resizeMode="stretch"
                                 />
                             </View>
                         ))}
@@ -217,20 +218,17 @@ export default function Home() {
 
 
                 {/* ================= GRID MENU ================= */}
-                <View style={{ backgroundColor: '#fff', paddingVertical: 20, paddingHorizontal: 16, marginTop: 8 }}>
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginBottom: 20 }}>
-                        {menuItem(require('../../assets/images/image 47.svg'), 'Ramadan')}
-                        {menuItem(require('../../assets/images/image 46.svg'), 'Mumpung\nMurah')}
-                        {menuItem(require('../../assets/images/image 45.svg'), 'Beli Lokal')}
-                        {menuItem(require('../../assets/images/image 50.svg'), 'Card')}
-                    </View>
-
-                    <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-                        {menuItem(require('../../assets/images/image 43.svg'), 'Keuangan')}
-                        {menuItem(require('../../assets/images/image 42.svg'), 'Seru')}
-                        {menuItem(require('../../assets/images/image 41.svg'), 'Tiket &\nHiburan')}
-                        {menuItem(require('../../assets/images/image 39.svg'), 'Sembako')}
-                    </View>
+                <View style={{ backgroundColor: '#fff', paddingVertical: 20, marginTop: 8 }}>
+                    <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 16, gap: 12 }}>
+                        {menuItem(require('../../assets/images/image 47.svg'), 'Fashion')}
+                        {menuItem(require('../../assets/images/image 46.svg'), 'Toserba')}
+                        {menuItem(require('../../assets/images/image 45.svg'), 'Tiket &\nHiburan ')}
+                        {menuItem(require('../../assets/images/image 50.svg'), 'Promo \n Terdekat')}
+                        {menuItem(require('../../assets/images/image 43.svg'), 'Tokopedia \n Seru')}
+                        {menuItem(require('../../assets/images/image 42.svg'), 'Keuangan')}
+                        {menuItem(require('../../assets/images/image 41.svg'), 'Tokopedia \n Card')}
+                        {menuItem(require('../../assets/images/image 39.svg'), 'Beli Lokal')}
+                    </ScrollView>
                 </View>
 
                 {/* ================= FLASH SALE SECTION ================= */}
@@ -272,7 +270,7 @@ export default function Home() {
                                 fontWeight: 'bold',
                                 color: '#00AA5B'
                             }}>
-                                For Denis
+                                For You !!
                             </Text>
                         </TouchableOpacity>
 
@@ -309,7 +307,20 @@ export default function Home() {
                                 fontWeight: '600',
                                 color: '#64748b'
                             }}>
-                                Action Figure
+                                Men's Clothing
+                            </Text>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity style={{
+                            paddingBottom: 8,
+                            marginRight: 24
+                        }}>
+                            <Text style={{
+                                fontSize: 16,
+                                fontWeight: '600',
+                                color: '#64748b'
+                            }}>
+                                Teknologi
                             </Text>
                         </TouchableOpacity>
                     </ScrollView>
@@ -378,7 +389,7 @@ const menuItem = (img: any, title: string) => (
         }}>
             <Image
                 source={img}
-                style={{ width: 70, height: 70, borderRadius: 10 }}
+                style={{ width: 56, height: 56, borderRadius: 10 }}
             />
         </View>
         <Text style={{ fontSize: 11, textAlign: 'center', color: '#1a1a1a', lineHeight: 14 }}>

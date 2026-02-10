@@ -53,18 +53,18 @@ export default function detailProducts() {
         Animated.parallel([
             Animated.timing(animationValue, {
                 toValue: { x: width / 2 - 40, y: -(height / 2) + 60 }, // Move towards top right
-                duration: 800,
+                duration: 2000,
                 useNativeDriver: true,
                 easing: Easing.bezier(0.25, 0.1, 0.25, 1)
             }),
             Animated.timing(scaleValue, {
                 toValue: 0.1, // Shrink
-                duration: 800,
+                duration: 2000,
                 useNativeDriver: true
             }),
             Animated.timing(opacityValue, {
                 toValue: 0, // Fade out
-                duration: 800,
+                duration: 1670,
                 delay: 200, // Start fading a bit later
                 useNativeDriver: true
             })
